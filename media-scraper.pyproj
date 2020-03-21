@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1943aa96-47f7-48c7-9f3e-b5d4edc1cc86}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>m-scraper.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="m_scraper\rq\error.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="m-scraper.py" />
+    <Compile Include="mediascrapers.py" />
+    <Compile Include="mediascraper\general.py" />
+    <Compile Include="mediascraper\instagram.py" />
+    <Compile Include="mediascraper\interactive\instagram.py" />
+    <Compile Include="mediascraper\interactive\twitter.py" />
+    <Compile Include="mediascraper\twitter.py" />
+    <Compile Include="m_scraper\rq\downloader.py" />
+    <Compile Include="m_scraper\rq\instagramer.py" />
+    <Compile Include="m_scraper\rq\pixiver.py" />
+    <Compile Include="m_scraper\rq\redditer.py" />
+    <Compile Include="m_scraper\rq\stats.py" />
+    <Compile Include="m_scraper\rq\tiktoker.py" />
+    <Compile Include="m_scraper\rq\tumblrer.py" />
+    <Compile Include="m_scraper\rq\utils\helpers.py" />
+    <Compile Include="m_scraper\rq\utils\instagram.py" />
+    <Compile Include="m_scraper\rq\__init__.py" />
+    <Compile Include="util\file.py" />
+    <Compile Include="util\instagram.py" />
+    <Compile Include="util\seleniumdriver.py" />
+    <Compile Include="util\twitter.py" />
+    <Compile Include="util\url.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mediascraper" />
+    <Folder Include="mediascraper\interactive" />
+    <Folder Include="m_scraper\" />
+    <Folder Include="m_scraper\rq" />
+    <Folder Include="m_scraper\rq\utils" />
+    <Folder Include="util" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

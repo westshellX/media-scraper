@@ -3,20 +3,21 @@
 #
 # Copyright (C) 2018 Elvis Yu-Jing Lin <elvisyjlin@gmail.com>
 # Licensed under the MIT License - https://opensource.org/licenses/MIT
-
 import sys
 
 if __name__ == '__main__':
-    if len(sys.argv) < 3:
+	for arg in sys.argv:
+		print(arg)
+	print(len(sys.argv))
+	    if len(sys.argv) < 3:
         print('Usage: python3 m-scraper.py [rq/bs] [instagram/twitter/tumblr/reddit] [options]')
         sys.exit(1)
     
     module = sys.argv[1]
     site = sys.argv[2]
-    
     if module == 'rq' and site == 'instagram':
-        import m_scraper.rq
-        scraper = m_scraper.rq.Instagramer()
+		import m_scraper.rq
+		scraper = m_scraper.rq.Instagramer()
     elif module == 'rq' and site == 'tumblr':
         import m_scraper.rq
         scraper = m_scraper.rq.Tumblrer()
